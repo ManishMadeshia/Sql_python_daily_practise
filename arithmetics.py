@@ -556,7 +556,6 @@ employees = {
 for emp_id, details in employees.items():
     print(emp_id,details['name'])
 
-'''
 
 
 data = (10, "Python", 3.5, True)
@@ -616,3 +615,19 @@ print("----------------")
 tp = tuple(l)
 print(tp)
 print(type(tp))
+
+'''
+
+# list practice
+
+
+
+
+
+
+
+
+
+
+
+
