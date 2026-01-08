@@ -621,13 +621,123 @@ print(type(tp))
 # list practice
 
 
+# 1. Create a list of 10 numbers and print it.
+l = []
+
+for i in range(1,11):
+    l.append(i)
+print(l)
+
+
+# 2. Access the 3rd, 5th, and last element of a list.
+print(l[2]) # access the 3rd element
+print(l[4])  # acces the 5 element
+print(l[-1])  # accessing the last element
+
+#3. Replace all even numbers in a list with 0.
+
+for i in range(len(l)):
+    if i%2==0:
+        l[i]= 0
+
+print(l)
+
+
+#4. Count how many elements are greater than 50.
+
+count = 0 
+
+for i in l:
+    if i > 50:
+        count = count + 1
+print(f"the total no greater the 50 is {count}")
+
+
+#5. Find the sum and average of list elements.
+
+sum = 0
+print(l)
+
+for i in l:
+    sum = sum + i
+print(f"the sum of list element : {sum}")
+print(f"the avg of list element: {sum // len(l)}")
+
+#6. Find the largest and smallest element in a list.
+
+element = [1,3,1,6,3,8,6,9,5,9,5,1,4]
+
+small_elem = element[0]
+largest_elem= element[0]
+
+
+for num in element:
+    if num < small_elem:          #1 < 1 = 1, 1<3 = 1, 1, 
+        small_elem = num
+    if num > largest_elem:         #1 > 1 = 1, 1>3 = 3,
+        largest_elem = num
+
+print(small_elem)
+print(largest_elem)
+
+
+# 7. Find the second largest element.
+
+def find_second_largest_sorted(numbers):
+    unique_num = list(set(numbers))  #convert to a set to remove duplicate and then back to list
+
+    if len(unique_num) < 2:
+        print("The number length should be greater than 2!")
+
+    unique_num.sort()
+
+    return unique_num[-2]
+
+listt = [1,2,1,2,3,4,2,1,4,33,2244,22,442]
+print(f"the second largest element in {listt} is : {find_second_largest_sorted(listt)}")
+
+
+# Example 
+list1 = [11, 22, 1, 2, 5, 67, 21, 32]
+print(f"The second largest element in {list1} is: {find_second_largest_sorted(list1)}")
+
+list2 = [10, 5, 10]
+print(f"The second largest element in {list2} is: {find_second_largest_sorted(list2)}")
 
 
 
+# 8. Reverse a list without using reverse() or slicing.
+
+li = [33,22,66,55,44]
+
+#solving using : in place reversal technique (two pointer)
+
+print(li)
+start_index = 0
+last_index = len(li)-1
+
+while start_index < last_index:
+    li[start_index], li[last_index] = li[last_index], li[start_index]
+
+    #move pointer inward
+    start_index += 1
+    last_index -= 1
+
+print(li)
 
 
 
+#9. Check if a list is sorted or not.
+
+#10 Remove duplicate elements from a list.
+
+li = [1,2,3,2,3,4,5]
 
 
 
+# 11 Create a new list containing squares of elements.
 
+sq = [i*i for i in range(1,10)]
+print(sq)
+
+#12 Separate even and odd numbers into two lists.
