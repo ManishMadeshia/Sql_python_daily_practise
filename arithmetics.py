@@ -728,11 +728,23 @@ print(li)
 
 
 #9. Check if a list is sorted or not.
+li = [1,2,3,4]
+is_sorted = True
+for i in range(len(li)-1):
+    if li[i] > li[i+1]:
+        is_sorted = False
+        break
+print(is_sorted)
+
 
 #10 Remove duplicate elements from a list.
 
-li = [1,2,3,2,3,4,5]
-
+ls = [1,2,3,2,1,2,3,4]
+new = []
+for item in ls:
+    if item not in new:
+        new.append(item)
+print(new)
 
 
 # 11 Create a new list containing squares of elements.
@@ -741,3 +753,49 @@ sq = [i*i for i in range(1,10)]
 print(sq)
 
 #12 Separate even and odd numbers into two lists.
+
+li = [1,2,3,4,6,0,8,4,2,5,8]
+e = []
+o = []
+
+
+for i in li:
+    if i <= 0:
+        print("no is equal to zero or less than zero")
+        exit
+    else:
+         if i%2==0:
+            e.append(i)
+         else:
+            o.append(i)
+print(f'the even no are {e}')
+print(f'the odd no are {o}')
+
+
+#13 . Merge two lists element-wise.
+
+a = [1,2,3]
+b = [5,7,9]
+
+print(list(zip(a,b)))
+
+
+# 14. Rotate a list left by 1 position.
+
+lst = [1,2,3,4]
+lst = lst[1:] + lst[:1]
+print(lst)
+
+#15 Find frequency of each element in a list.
+
+
+li= [1,2,3,2,1,3,4,5,5]
+
+frequency = {}
+
+for i in li:
+    if i in frequency:
+        frequency[i] += 1
+    else:
+        frequency[i] = 1
+print(frequency)
