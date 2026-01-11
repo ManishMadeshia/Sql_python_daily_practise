@@ -927,3 +927,77 @@ tupp = ((1,2,3),(5,6,7),(8,9))
 
 tuppp = tuple(x for sub in tupp for x in sub)
 print(tuppp)
+
+
+
+#--------------------dictionary-------------------
+
+#48 Create a dictionary with 5 key–value pairs.
+
+dic = {
+    'name':"Manish",
+    'Profile':"Data Engineer",
+    'status' : 'Struggling',
+    'certification': "grow data skill",
+    'exp_salary': '4-5 lpa'
+}
+
+print(dic)
+print(type(dic))
+
+#49 Access value safely using get().
+
+print(dic.get('names')) # using get function if value not available it does not throw error but using indexing it throw error
+print(dic["name"])
+
+#50 Add, update, and delete a key in dictionary.
+
+dic['skills'] = 'Big data Engineer' # adding value
+dic["status"] = "Learning"           # updating value 
+del dic['skills']
+print(dic)  
+
+#51Loop through dictionary and print keys and values.
+
+for k, v in dic.items():
+    print(f'the key is : {k}, & it value: {v}')
+
+count = 0
+
+#52 Count number of keys without using len().
+for k in dic.keys():
+    count = count + 1
+print(f'the total no of keys is:{count} ')
+
+
+#55. Reverse keys and values in dictionary.
+d = {"a":1,"b":2,"c":3,"d":4,"e":5}
+
+
+rev = {v:k for k,v in d.items()}
+print(rev)
+
+
+
+#56 Check if a key exists.
+
+inp = input("Enter a key: ")
+
+if inp in d:
+    print("exist")
+    print(inp)
+else:
+    print("key not exist")
+
+#57 Check if a value exists.
+
+V = int(input("Enter a key: "))
+
+if V in d:
+    print("exist")
+    print(V)
+else:
+    print("key not exist")
+
+
+
