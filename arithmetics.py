@@ -799,3 +799,42 @@ for i in li:
     else:
         frequency[i] = 1
 print(frequency)
+
+
+#16. Flatten a nested list [[1,2],[3,4],[5]].
+
+lis = [[1,2],[3,4],[5]]
+
+
+k = [x for sub in lis for x in sub ]
+print(k)
+
+#17. find common element in two list
+
+lis1 = [1,2,3,4]
+lis2 = [3,4,5,6]
+comm = []
+for x in lis1:
+    for y in lis2:
+        if x == y:
+            comm.append(y)
+
+print(f'the command element: {comm}')
+
+#18. Check if a list is palindrome.
+
+li = [2,3,3,2]
+
+if li[0:] == li[::-1]:
+    print("li is palindrome")
+else:
+    print("not a palindrome")
+
+
+#19 Implement list comprehension for filtering numbers > 10.
+
+li = [2,5,7,22,33,55,11,22,8,4,33,55,34,3,55,54]
+l = [x for x in li if x>10 ]
+print(l)
+
+
