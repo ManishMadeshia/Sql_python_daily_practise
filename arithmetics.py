@@ -838,3 +838,92 @@ l = [x for x in li if x>10 ]
 print(l)
 
 
+#--------------------------------
+
+#21 Create a tuple with mixed datatypes.
+tup = (1,2,3.3,33.33, True, "Manish")
+print(type(tup))
+
+
+#22' Create a single-element tuple correctly.
+
+li = [1,2,3,4,5]
+tup1= tuple(li)
+
+#23 Count occurrences of an element in a tuple.
+
+tu = (4, 2, 9, 1, 7, 3)
+
+for x in tu:
+    count = 0
+    for y in tu:
+        if x == y:
+            count += 1
+    print(f'the count of {x}: {count}')
+
+#25 Find index of an element without using index().
+tu = (4, 2, 9, 1, 7, 3)
+
+count= 0
+for x in tu :
+    print(f"the index of element {x} is {count}")
+    count += 1
+
+
+#26 Find maximum and minimum element in a tuple.
+
+tu = (1,2,3,4,1,2)
+
+minn = tu[0]
+maxx = tu[0]
+
+for x in tu:
+    if x < minn:
+        minn = x
+    if x > maxx:
+        maxx = x
+print("Maximum element:", minn)
+print("Minimum element:", maxx)
+
+#27 Unpack a tuple into variables.
+
+a,b,c = (1,2,3)
+print(a)
+print(b)
+print(c)
+
+
+#28 Swap two numbers using tuple unpacking.
+
+a = 9
+b = 3
+print(f'the value of a is {a}')
+print(f'the value of b is {b}')
+
+
+print("after swapping two number using tuple unpacking")
+a,b = b,a
+print(f'the value of a is {a}')
+print(f'the value of b is {b}')
+
+# 29 Check if an element exists in a tuple.
+
+tu = (1,2,3,4)
+
+for x in tu:
+    if 5 in tu:
+        print("present")
+    else:
+        print("not present")
+
+#30 Concatenate two tuples.
+tu1 =(12,13,14)
+
+print(tu + tu1)
+
+
+#31 
+tupp = ((1,2,3),(5,6,7),(8,9))
+
+tuppp = tuple(x for sub in tupp for x in sub)
+print(tuppp)
