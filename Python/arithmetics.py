@@ -616,7 +616,6 @@ tp = tuple(l)
 print(tp)
 print(type(tp))
 
-'''
 
 # list practice
 
@@ -999,5 +998,155 @@ if V in d:
 else:
     print("key not exist")
 
+
+#58 Create a nested dictionary for students and marks.
+
+studenta_marks={
+    "manish":{
+        'math': 90,
+        'science': 88,
+        'English':44,
+    },
+    "anish":{
+        'math': 80,
+        'science': 85,
+        'English': 88,
+    },
+    "nish":{
+        'math': 88,
+        'science': 78,
+        'English':89,
+    }
+}
+
+print(studenta_marks)
+
+studenta_marks["manish"]['math'] = 88
+print(studenta_marks)
+
+del studenta_marks["nish"]
+print(studenta_marks)
+
+
+#50 qusetion praticze
+
+'''
+num = 3
+
+if num%2 == 0 :
+    print("even")
+elif num%2 == 1:
+    print("odd")
+else:
+    print("not define")
+
+x = True + False
+print(x)
+print(type(x))
+
+i = 10
+s = str(i)
+print(s)
+print(type(s))
+print(type(None))
+
+
+num = 13
+
+if num >= 10 and num <=50:
+    print("num in between 10 and 50")
+else:
+    print("sorry")
+
+print(False or False)
+print(1 < 5 < 10)
+
+num = 1
+if num == 0:
+    print("zero")
+else:
+    if num > 0:
+        print("positive")
+    else: 
+        print("negative")
+
+
+age = 11
+
+if age == 0 and age <= 0 or age> 100:
+    print("Please Enter Correct age")
+else:
+    if age <18 :
+        print("teenage")
+    elif age > 18 :
+        print("adult")
+    elif age > 50 :
+        print("senior citizen")
+
+for i in range(1,11):
+    if i == 5:
+        pass
+    else:
+        print(i)
+
+for i in range(3):
+    for j in range(2):
+        print(i, j)
+
+sum = 0
+
+print(900//10)
+
+for i in range(1,11):
+    print(f'the multiplication table of 5 is {5}*{i} = {5*i}')
+
+l = [i*i for i in range(1,11)]
+print(l)
+
+l = [1,2,3,2,1,2]
+l = set(l)
+print(l)
+l = [1,2,3,4,5,6,7,8,6,5,4]
+
+print(l[::-1])
+
+
+for i in range(len(l)):
+    print(l[::-1])
+
+largest = l[0]
+
+for i in l:
+    if i > largest:
+        largest = i
+print(largest)
+
+
+l = [i for i in l if i%2 ==0 ]
+print(l)
+
+
+s = ['s','d','g','h','t']
+upp_s = []
+for i in s:
+    i = i.upper()
+    upp_s.append(i)
+print(upp_s)
+
+#------------------------------------
+
+tpl = (2,)
+print(type(tpl))
+    
+s1 = {1,2,3}
+s2 = {4,3,5}
+
+s3 = s1.intersection(s2)
+print(s3)
+
+def squ(num):
+    return num * num
+
+print(squ(3))
 
 
