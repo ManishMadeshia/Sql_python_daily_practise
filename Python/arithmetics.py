@@ -1149,4 +1149,171 @@ def squ(num):
 
 print(squ(3))
 
+l = [1,2,3,4,5]
+print(l[1])
+l.append(5)
+print(l)
+l.remove(4)
+print(l)
 
+print(l[::-1])
+
+sum = 0
+for i in l:
+    sum = sum +i
+print(sum)
+
+count  = 0
+n = 5
+for i in l:
+    if i==n:
+        count = count+1
+print(count)
+
+max = l[0]
+min = l[1]
+
+for i in l:
+    if i < min:
+        min = i
+    if i > max:
+        max = i
+print(max)
+print(min)
+
+
+f = [i*i for i in range(1,11)]
+print(f)
+
+e = [i for i in range(1,20) if i%2==0]
+print(e)
+
+e = [i for i in range(1,50) if i%3==0 or i%5==0]
+print(e)
+
+l = ['w','e','t','y','u']
+f = [i.upper() for i in l ]
+print(f)
+
+l = ['manish','bipin','mohan','sav']
+
+f = [len(word) for word in l]
+print(f)
+
+l = [1,2,3,4,3,2,1]
+
+i = 0,1,2
+j = 1,2,3
+
+
+a = [1, 2, 3]
+b = a[:]
+b.append(4)
+print(a)
+print([1, 2, 3] * 3)
+print(len([[]] * 3))
+
+
+a = [1, 2, 3]
+print(a == a[:])
+print(a is a[:])
+
+lst = []
+lst.append(lst)
+print(len(lst))
+
+l = ['manish','bipin','mohan','sav']
+
+long_str = l[0]
+
+for i in l :
+    if len(i) > len(long_str):
+        long_str = len[i]
+print(long_str)
+
+l = [i for i in l if len(i)>4]
+print(l)
+
+
+l = [1,2,1]
+
+if l[0:] == l[::-1]:
+    print("list is palindrome")
+else:
+    print("List is not palindrome")
+
+l = [1,2,3,4]
+n = []
+
+for i in l:
+    if i%2 == 0:
+        i = i*i
+        n.append(i)
+print(i)
+print(n)
+
+l = [1, 2, 3]
+ls = [1, 2, 4]
+
+n = []
+
+for i in l:
+    if i in ls and i not in n:
+        n.append(i)
+
+print(n)
+
+l = ['manish','mohan','apache']
+n = []
+for i in l:
+    if len(i) > 5:
+        print(f"the lenth of {i} is {len(i)} ")
+        n.append(i)
+print("the element which are present in l and length greater than 5: ")
+print(n)
+
+
+l = [1,0,6,-4,8,-88,-44,-3]
+
+for i in range(len(l)) :
+    if l[i] < 0:
+        l[i]=0
+print(l)
+
+ls = [ [(i*j) for j in range(3)] for i in range(3)]
+print(ls)
+
+l = [[1,2],[3,4],[5,6]]
+
+n = []
+for i in l:
+    for j in i:
+        n.append(j)
+print(n)
+
+
+l = [1, 2, 3, 4, 5, 6, 7]
+target = 8
+pairs = []
+
+for i in range(len(l)):
+    for j in range(i+1, len(l)):
+        if l[i] + l[j] == target:
+            pairs.append((l[i],l[j]))
+
+print(pairs)
+
+
+l = [1, 2, 3, 4, 5, 6, 7]
+
+odd = []
+even = []
+
+for i in l:
+    if i%2==0:
+        even.append(i)
+    elif i%2 != 0:
+        odd.append(i)
+
+print(f'odd number are {odd}')
+print(f'even number are {even}')
